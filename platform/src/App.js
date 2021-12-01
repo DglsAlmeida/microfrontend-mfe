@@ -6,13 +6,11 @@ import { Dashboard } from './pages/Dashboard'
 
 const App = () => {
   return (
-  <>
-    <GlobalStyles />
     <BrowserRouter>
+      <GlobalStyles />
       <Dashboard />
       <Router />
     </BrowserRouter>
-  </>
   )
 }
 

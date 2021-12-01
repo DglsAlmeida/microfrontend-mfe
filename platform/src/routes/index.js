@@ -1,15 +1,15 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { RemoteComponent } from '../loaderMfe';
+import { RemoteComponent } from '../LoaderMfe';
 
 const dynamicRoutes = [
   {
     id: 1,
     path: '/',
-    component: 'http://localhost:9001/remoteEntry.js',
-    url: 'http://localhost:9001/remoteEntry.js',
+    url: 'http://localhost:3001/remoteEntry.js',
     moduleFederationName: 'reactMfe',
-    module: './products'
+    module: './products',
+    exact: true
   },
 ]
 
@@ -20,11 +20,11 @@ export const Router = () => {
           <Route
             key={route.id}
             path={route.path}
+            exact={route.exact}
             element={
               <RemoteComponent
                 remoteComponent={{
                   url: route.url,
-                  component: route.component,
                   scope: route.moduleFederationName,
                   module: route.module,
                 }}

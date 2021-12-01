@@ -9,12 +9,11 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: 'http://localhost:9000/'
+    filename: '[name].js',
+    publicPath: 'http://localhost:3000/'
   },
   devServer: {
-    port: 9000,
-    historyApiFallback: true,
+    port: 3000,
     hot: true
   },
   mode: "production",
