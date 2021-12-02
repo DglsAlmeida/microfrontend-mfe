@@ -39,8 +39,6 @@ export const Products = () => {
     )
   }
 
-  console.log(products)
-
   return (
     <ContainerProducts>
       <ProductsContent>

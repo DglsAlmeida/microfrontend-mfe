@@ -11,6 +11,14 @@ const dynamicRoutes = [
     module: './products',
     exact: true
   },
+  {
+    id: 2,
+    path: '/cart',
+    url: 'http://localhost:3002/remoteEntry.js',
+    moduleFederationName: 'reactMfe',
+    module: './cart',
+    exact: false
+  },
 ]
 
 export const Router = () => {
