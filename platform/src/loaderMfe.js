@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Loader } from './components/Loader'
 
 const loadComponent = (scope, module) => {
   return async () => {
@@ -71,8 +72,16 @@ export const RemoteComponent = ({
 
   if (!ready && !failed) {
     return (
-      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-        <h2>Loading...</h2>
+      <div 
+        style={{ 
+          width: '100%', 
+          marginTop: '100px',
+          display: 'flex', 
+          justifyContent: 'center', 
+          alignItems: 'center', 
+        }}
+      >
+        <Loader  />
       </div>
     )
   }
